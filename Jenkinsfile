@@ -5,6 +5,10 @@ pipeline{
             steps{
                 sh 'ls -lrt'
             }
+        }stage( 'build'){
+            steps{
+                sh 'pwd'
+            }
         }
 
     }

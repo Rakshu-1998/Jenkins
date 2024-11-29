@@ -1,0 +1,13 @@
+pipelines{
+    agen any
+    
+    enivironment {
+        APP = 'frontend'
+        DB_URL = '198.168.28.24'
+        BRANCH = 'main'
+        GIT_URL = 'https://github.com/Rakshu-1998/Jenkins-R.git'
+        CRED_ID = 
+
+    }
+    }
+}
