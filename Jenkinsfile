@@ -16,7 +16,11 @@ pipeline{
                 sh 'cd'
             }
         }
+        stage( 'job2'){
+            steps{
+                sh 'ls -a'
+            }
+        }
+     }
 
     }
-
-}
