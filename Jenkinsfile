@@ -11,6 +11,11 @@ pipeline{
                 sh 'pwd'
             }
         }
+        stage('job'){
+            steps{
+                sh 'which'
+            }
+        }
 
     }
 
