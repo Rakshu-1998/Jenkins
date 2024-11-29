@@ -11,9 +11,9 @@ pipeline{
                 sh 'pwd'
             }
         }
-        stage('job'){
+        stage( 'job' ){
             steps{
-                sh 'which'
+                sh 'cd'
             }
         }
 
