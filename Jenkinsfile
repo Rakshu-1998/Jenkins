@@ -1,11 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage( 'checkout stage '){
+        stage('checkout stage'){
             steps{
                 sh 'ls -lrt'
             }
-        }stage( 'build'){
+        }
+        stage( 'build'){
             steps{
                 sh 'pwd'
             }
