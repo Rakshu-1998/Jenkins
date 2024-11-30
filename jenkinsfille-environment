@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent any
     environment {
         GIT_URL = 'https://github.com/Rakshu-1998/Jenkins-R.git'
