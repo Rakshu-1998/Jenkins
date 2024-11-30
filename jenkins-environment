@@ -1,13 +1,28 @@
-pipelines{
-    agen any
-    
-    enivironment {
-        APP = 'frontend'
-        DB_URL = '198.168.28.24'
-        BRANCH = 'main'
+pipeline{
+    agent any
+    environment {
         GIT_URL = 'https://github.com/Rakshu-1998/Jenkins-R.git'
-        CRED_ID = 
-
+        GIT_BRANCH = 'main'
+        GIT_CREDIENTIALS = '/******'
     }
+    stages {
+        stage('CHECKOUT') {
+            steps {
+                script {
+                    git branch : "${env.GIT_BRANCH}",
+                    credientialsID: "${env.GIT_CRENDITIALS}",
+                    url: "${env.GIT_URL}"
+                }
+            }
+        }
+        stafe('CHECK'){
+            steps {
+                sh '''
+                ls -lrt
+                echo $GIT_BRANCH
+                ENV
+                '''
+            }
+        }
     }
 }
