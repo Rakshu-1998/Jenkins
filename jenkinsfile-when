@@ -1,0 +1,41 @@
+pipeline{
+    agent any
+    environment{
+        BRANCH='*/sub'
+        CRD_ID='github'
+        GIT_URL='https://github.com/Rakshu-1998/Jenkins-R.git'
+    }
+    
+    stages{
+        stage("checkout"){
+            steps{
+            
+            checkout scmGit(branches: [[name: "${env.BRANCH}"]], extensions: [], 
+                userRemoteConfigs: [[credentialsId: "${env.CRD_ID}",
+                 url: "${env.GIT_U}"]])
+            }
+        }
+        stage("build1"){
+            when{
+                not{
+
+                  environment name: 'BRANCH', value: 'main' 
+                }
+            }
+            
+            steps{
+        
+                sh "ls -lrt"
+            } 
+        }
+        stage("build2"){
+            when{
+
+                branch '*/sub' 
+            }
+            steps{
+                echo"sub branch"
+            }
+        }
+    }
+ss }
