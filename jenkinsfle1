@@ -10,13 +10,13 @@ pipeline {
             }
         }
         stage("Build"){
-            steps{
+            steps {
                 sh "echo this is build stage"
                 sh "sleep 5"
             }
         }
         stage("Test"){
-            steps{
+            steps {
                 sh "echo is is integration test"
                 sh "sleep 5"
             }
