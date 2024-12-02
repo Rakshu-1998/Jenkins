@@ -6,18 +6,18 @@ pipeline {
                 echo "This is the first stage"
             }
         }
-        stage('SECONF_STAGE'){
+        stage('SECOND_STAGE'){
             steps{
-                echo "This is seconf stage"
+                echo "This is second stage"
             }
+        }
         }
         post{
             always {
-                echo "This will run on when stage is SUCESS, FAILURE, UNSTABLE, ABORTED"
+                echo "This will run on when stage is SUCCESS, FAILURE, UNSTABLE, ABORTED"
             }
             failure {
                 echo "This will run when build fails"
             }
-        }
     }
 }
