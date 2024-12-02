@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('EXAMPLE'){
             input{
-                Hi,I am Rakhistha from Wipro
+               message Hi,I am Rakhistha from Wipro
                 can we connect now?
                 submitter "Rakshitha HM"
                 paramaters{
