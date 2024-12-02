@@ -1,4 +1,3 @@
-/* groovylint-disable DuplicateStringLiteral */
 pipeline {
     agent any
     stages {
