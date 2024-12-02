@@ -20,7 +20,7 @@ pipeline {
                 sh '''
                 ls -lrt
                 echo $GIT_BRANCH
-                ENV
+                 echo ENV
                 '''
             }
         }
