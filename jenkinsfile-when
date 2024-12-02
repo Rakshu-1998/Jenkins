@@ -1,8 +1,8 @@
 pipeline{
     agent any
     environment{
-        BRANCH='*/sub'
-        CRD_ID='github'
+        BRANCH='main'
+        CRD_ID='NEWCD'
         GIT_URL='https://github.com/Rakshu-1998/Jenkins-R.git'
     }
     
@@ -28,7 +28,7 @@ pipeline{
         }
         stage("build2"){
             when{
-                branch '*/sub' 
+                branch 'main' 
             }
             steps{
                 echo"sub branch"
