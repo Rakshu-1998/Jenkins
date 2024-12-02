@@ -11,10 +11,11 @@ pipeline {
                 sh 'sleep 4'
             }
         }
-        stage('TEST2') {}
+        stage('TEST2') {
             steps {
                 sh 'sleep 4'
             }
+        }
     stage('STAGE 2') {
         steps {
             sh 'sleep4'
