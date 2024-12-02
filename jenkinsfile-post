@@ -11,7 +11,7 @@ pipeline {
                 echo "This is seconf stage"
             }
         }
-        post {
+        post{
             always {
                 echo "This will run on when stage is SUCESS, FAILURE, UNSTABLE, ABORTED"
             }
