@@ -5,7 +5,7 @@ pipeline{
             input{
                 Hi,I am Rakhistha from Wipro
                 can we connect now?
-                submitter "Rakshitha HM"
+                submitter : "Rakshitha HM"
                 paramaters{
                     string (name: 'PERSON', defaultValue: 'Ms Rakshitha', description: 'Who should I say hello to?')
                 }
