@@ -15,7 +15,7 @@ pipeline {
                 }
             }
         }
-        stafe('CHECK'){
+        stage('CHECK'){
             steps {
                 sh '''
                 ls -lrt
