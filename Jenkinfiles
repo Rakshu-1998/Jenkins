@@ -1,7 +1,7 @@
-pipelines {
+pipeline {
     agent any
     stages {
-     stage ('STAGE1')
+     stage ('STAGE1'){
      steps {
         sh 'sleep 4'
         echo  "this is STAGE1 of pipeline"
@@ -13,4 +13,5 @@ pipelines {
             echo "this is STAGE2 of pipeline"
         }
     }
+}
 }

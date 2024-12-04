@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    environment{
+        BRANCH='main'
+        GIT_URL='https://github.com/Rakshu-1998/Jenkins-Zero-To-Hero.git'
+    }
+    
+    stages{
+        stage("checkout"){
+            steps{
+            checkout scmGit(branches: [[name: "${env.BRANCH}"]], extensions: [], 
+                userRemoteConfigs: [[
+                 url: "${env.GIT_URL}"]])
+            }
+        }
+    }
+}
